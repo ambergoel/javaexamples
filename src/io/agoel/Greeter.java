@@ -2,13 +2,15 @@ package io.agoel;
 
 public class Greeter {
 
-	private void greeting() {
-		System.out.println("hello world");
+	private void greeting(IGreeting igreeting) {
+		igreeting.perform();
+		
 	}
 
 	public static void main(String[] args) {
 	
 		Greeter greeter = new Greeter();
-		greeter.greeting();
+		HelloWorldGreeting helloWorldGreeting = new HelloWorldGreeting();
+		greeter.greeting(helloWorldGreeting);
 	}
 }
