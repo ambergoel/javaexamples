@@ -17,6 +17,10 @@ public class Greeter {
 		
 		myLambda.foo();
 		
+		IGreeting greetingLambda = () -> System.out.println("hello world");
+		
+		greetingLambda.perform();
+		
 		
 	}
 }
